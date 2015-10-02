@@ -1,11 +1,11 @@
-Using BeautifulSoup to scrape data from 
+#Using BeautifulSoup to scrape data from websites
 
 
-Pre-requisites:
-1. INSTALL pip
+##Pre-requisites:
+###1. INSTALL pip
 
 
-	sudo easy_install pip
+	```sudo easy_install pip
 	Password:
 	Searching for pip
 	Reading http://pypi.python.org/simple/pip/
@@ -38,13 +38,14 @@ Pre-requisites:
 
 	pip --version
 	pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7)
+```
 
 
-2. INSTALL iPython
+###2. INSTALL iPython
 iPython provides a better IDE for developers than the default python IDE. 
 It provides helpful features like auto-complete and context-sensitive help.
 
-	sudo pip install ipython[all]
+	```sudo pip install ipython[all]
 	Password:
 	The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 	The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -195,10 +196,10 @@ It provides helpful features like auto-complete and context-sensitive help.
 	Successfully installed MarkupSafe-0.23 Sphinx-1.3.1 alabaster-0.7.6 appnope-0.1.0 babel-2.1.1 backports.ssl-match-hostname-3.4.0.2 certifi-2015.9.6.2 decorator-4.0.4 docutils-0.12 funcsigs-0.4 functools32-3.2.3-2 gnureadline-6.3.3 ipykernel-4.0.3 ipyparallel-4.0.2 ipython-4.0.0 ipython-genutils-0.1.0 jinja2-2.8 jsonschema-2.5.1 jupyter-client-4.0.0 jupyter-core-4.0.6 mistune-0.7.1 mock-1.3.0 nbconvert-4.0.0 nbformat-4.0.0 nose-1.3.7 notebook-4.0.5 numpydoc-0.5 path.py-8.1.1 pbr-1.8.0 pexpect-3.3 pickleshare-0.5 ptyprocess-0.5 pygments-2.0.2 pyreadline-2.1 pytz-2015.6 pyzmq-14.7.0 qtconsole-4.0.1 requests-2.7.0 simplegeneric-0.8.1 six-1.9.0 snowballstemmer-1.2.0 sphinx-rtd-theme-0.1.9 terminado-0.5 testpath-0.2 tornado-4.2.1 traitlets-4.0.0
 	/Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
   	InsecurePlatformWarning
-	
+```
  
-3. TO RESOLVE THE "InsecurePlatformWarning" from previous command, upgrade urllib3
-	/Library/Python/2.7/site-packages:$ sudo pip install urllib3 --upgrade
+###3. TO RESOLVE THE "InsecurePlatformWarning" from previous command, upgrade urllib3
+	```/Library/Python/2.7/site-packages:$ sudo pip install urllib3 --upgrade
 	Password:
 	The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 	The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -210,10 +211,11 @@ It provides helpful features like auto-complete and context-sensitive help.
 	Installing collected packages: urllib3
 	Successfully installed urllib3-1.12
 	/Library/Python/2.7/site-packages:$ 
+```
 	
 	
-4. NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND BUT RAN THE INSTALL FOR IT ANYWAY
-	~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install pyopenssl ndg-httpsclient pyasn1
+###4. NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND BUT RAN THE INSTALL FOR IT ANYWAY AND FOUND THAT THE INSTALL WAS ALREADY TAKEN CARE OF
+	```~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install pyopenssl ndg-httpsclient pyasn1
 	The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 	The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 	Requirement already satisfied (use --upgrade to upgrade): pyopenssl in /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python
@@ -227,10 +229,11 @@ It provides helpful features like auto-complete and context-sensitive help.
   	Running setup.py install for ndg-httpsclient
 	Successfully installed ndg-httpsclient-0.4.0 pyasn1-0.1.9
 	
+```
 
-5. INSTALL BEAUTIFULSOUP 4
+###5. INSTALL BEAUTIFULSOUP 4
 
-~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install BeautifulSoup
+```~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install BeautifulSoup
 Password:
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -253,5 +256,6 @@ Collecting beautifulsoup4
 Installing collected packages: beautifulsoup4
 Successfully installed beautifulsoup4-4.4.1
 ~/Documents/NYCDA/Projects/pythonWork/soupy:$ 
+```
 
 
