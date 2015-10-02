@@ -8,7 +8,7 @@
 [June 2014 Blog post from SEBASTIANRASCHKA](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#Comparing-unorderable-types)  
 
 For my immediate goals of building some simple web scrapers, I decided to follow [Quora response from Yilun Zhang](https://www.quora.com/What-should-I-use-for-data-science-Python-2-7-x-or-Python-3-4-x/answer/Yilun-Tom-Zhang?srid=zU1D)  
-taking into account that there seems to be lower adoption of Python 3.x (I need to verify this with more research though)
+taking into account that there seems to be lower adoption of Python 3.x (I need to verify this with more research though)  
 It is possible to maintain multiple Python environments on the same OS though - so I will be installing latest build of Python 3 at some point.
 
 
@@ -257,4 +257,47 @@ Successfully installed beautifulsoup4-4.4.1
 ```
 
 ###7. INSTALL VIRTUALENV
+
+```
+sudo pip install virtualenv
+Password:
+The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenv
+  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.python.org', port=443): Read timed out. (read timeout=15)",)': /simple/virtualenv/
+  Downloading virtualenv-13.1.2-py2.py3-none-any.whl (1.7MB)
+    100% |████████████████████████████████| 1.7MB 282kB/s 
+Installing collected packages: virtualenv
+Successfully installed virtualenv-13.1.2
+```
+
+
+```
+sudo pip install virtualenvwrapper
+The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenvwrapper
+  Downloading virtualenvwrapper-4.7.1-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): virtualenv in /Library/Python/2.7/site-packages (from virtualenvwrapper)
+Collecting virtualenv-clone (from virtualenvwrapper)
+  Downloading virtualenv-clone-0.2.6.tar.gz
+Collecting stevedore (from virtualenvwrapper)
+  Downloading stevedore-1.8.0-py2.py3-none-any.whl
+Collecting argparse (from stevedore->virtualenvwrapper)
+  Downloading argparse-1.4.0-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): six>=1.9.0 in /Library/Python/2.7/site-packages (from stevedore->virtualenvwrapper)
+Requirement already satisfied (use --upgrade to upgrade): pbr<2.0,>=1.6 in /Library/Python/2.7/site-packages (from stevedore->virtualenvwrapper)
+Installing collected packages: virtualenv-clone, argparse, stevedore, virtualenvwrapper
+  Running setup.py install for virtualenv-clone
+Successfully installed argparse-1.4.0 stevedore-1.8.0 virtualenv-clone-0.2.6 virtualenvwrapper-4.7.1
+~/Documents/NYCDA/Projects/pythonWork/soupy:master$ 
+```
+
+```
+export WORKON_HOME=~/Envs
+```
+
+```
+source /usr/local/bin/virtualenvwrapper.sh
+```
 
