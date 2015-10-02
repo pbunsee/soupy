@@ -228,7 +228,7 @@ Successfully installed urllib3-1.12
 Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
 and ran the following command which I found was unnecessary but worth the check:
 ```
-~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install pyopenssl ndg-httpsclient pyasn1
+sudo pip install pyopenssl ndg-httpsclient pyasn1
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Requirement already satisfied (use --upgrade to upgrade): pyopenssl in /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python
@@ -245,7 +245,7 @@ Successfully installed ndg-httpsclient-0.4.0 pyasn1-0.1.9
 
 ###6. INSTALL BEAUTIFULSOUP 4
 ```
-~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install beautifulsoup4
+sudo pip install beautifulsoup4
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Collecting beautifulsoup4
@@ -253,7 +253,6 @@ Collecting beautifulsoup4
     100% |████████████████████████████████| 81kB 4.5MB/s 
 Installing collected packages: beautifulsoup4
 Successfully installed beautifulsoup4-4.4.1
-~/Documents/NYCDA/Projects/pythonWork/soupy:$ 
 ```
 
 ###7. INSTALL VIRTUALENV
@@ -290,7 +289,6 @@ Requirement already satisfied (use --upgrade to upgrade): pbr<2.0,>=1.6 in /Libr
 Installing collected packages: virtualenv-clone, argparse, stevedore, virtualenvwrapper
   Running setup.py install for virtualenv-clone
 Successfully installed argparse-1.4.0 stevedore-1.8.0 virtualenv-clone-0.2.6 virtualenvwrapper-4.7.1
-~/Documents/NYCDA/Projects/pythonWork/soupy:master$ 
 ```
 
 ```
