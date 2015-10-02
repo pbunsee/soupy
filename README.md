@@ -1,8 +1,18 @@
 #Using BeautifulSoup to scrape data from websites
 
 
-##Pre-requisites:
-###1. INSTALL pip
+##Pre-requisites - Environment Preparation:
+###1. Which Python version to use? Python 2.7 (which is the default installed on Mac OS X) or Python 3?
+[https://wiki.python.org/moin/Python2orPython3](Python wiki advice)  
+[http://learntocodewith.me/programming/python/python-2-vs-python-3/](June 2014 Blog post from Learn to Code with Me)  
+[http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#Comparing-unorderable-types](June 2014 Blog post from SEBASTIANRASCHKA)
+
+For my immediate goals of building some simple web scrapers, I decided to follow [https://www.quora.com/What-should-I-use-for-data-science-Python-2-7-x-or-Python-3-4-x/answer/Yilun-Tom-Zhang?srid=zU1D](Quora response from Yilun Zhang)  
+taking into account that there seems to be lower adoption of Python 3.x (I need to verify this with more research though)
+It is possible to maintain multiple Python environments on the same OS though - so I will be installing latest build of Python 3 at some point.
+
+
+###2. INSTALL pip
 ```
 sudo easy_install pip
 Password:
@@ -39,9 +49,9 @@ pip --version
 pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7)
 ```
 
-###2. INSTALL iPython
+###3. INSTALL iPython
 iPython provides a better IDE for developers than the default python IDE. 
-It provides helpful features like auto-complete and context-sensitive help.
+It provides helpful features like auto-complete and context-sensitive method selection.
 
 ```
 sudo pip install ipython[all]
@@ -197,7 +207,7 @@ Successfully installed MarkupSafe-0.23 Sphinx-1.3.1 alabaster-0.7.6 appnope-0.1.
 InsecurePlatformWarning
 ```
  
-###3. TO RESOLVE THE "InsecurePlatformWarning" from previous command, upgrade urllib3
+###4. TO RESOLVE THE "InsecurePlatformWarning" from previous command, upgrade urllib3
 ```
 /Library/Python/2.7/site-packages:$ sudo pip install urllib3 --upgrade
 Password:
@@ -214,7 +224,7 @@ Successfully installed urllib3-1.12
 ```
 	
 	
-###4. WAS NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND  BUT RAN THE INSTALL FOR IT ANYWAY AND  FOUND THAT THE INSTALL WAS ALREADY TAKEN CARE OF
+###5. WAS NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND  BUT RAN THE INSTALL FOR IT ANYWAY AND  FOUND THAT THE INSTALL WAS ALREADY TAKEN CARE OF
 Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
 and ran the following command which I found was unnecessary but worth the check:
 ```
@@ -233,7 +243,7 @@ Running setup.py install for ndg-httpsclient
 Successfully installed ndg-httpsclient-0.4.0 pyasn1-0.1.9
 ```
 
-###5. INSTALL BEAUTIFULSOUP 4
+###6. INSTALL BEAUTIFULSOUP 4
 ```
 ~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install beautifulsoup4
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -246,4 +256,5 @@ Successfully installed beautifulsoup4-4.4.1
 ~/Documents/NYCDA/Projects/pythonWork/soupy:$ 
 ```
 
+###7. INSTALL VIRTUALENV
 
