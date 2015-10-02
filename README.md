@@ -211,7 +211,7 @@ It provides helpful features like auto-complete and context-sensitive help.
 	Installing collected packages: urllib3
 	Successfully installed urllib3-1.12
 	/Library/Python/2.7/site-packages:$ 
-```
+    ```
 	
 	
 ###4. NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND BUT RAN THE INSTALL FOR IT ANYWAY AND FOUND THAT THE INSTALL WAS ALREADY TAKEN CARE OF
@@ -229,7 +229,7 @@ It provides helpful features like auto-complete and context-sensitive help.
   	Running setup.py install for ndg-httpsclient
 	Successfully installed ndg-httpsclient-0.4.0 pyasn1-0.1.9
 	
-```
+    ```
 
 ###5. INSTALL BEAUTIFULSOUP 4
 
@@ -243,10 +243,11 @@ Installing collected packages: BeautifulSoup
   Running setup.py install for BeautifulSoup
 Successfully installed BeautifulSoup-3.2.1
 ~/Documents/NYCDA/Projects/pythonWork/soupy:$ 
-
+```
 
 
 OR Use the following command:
+```
 ~/Documents/NYCDA/Projects/pythonWork/soupy:$ sudo pip install beautifulsoup4
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
