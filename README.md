@@ -7,7 +7,7 @@
 [June 2014 Blog post from Learn to Code with Me](http://learntocodewith.me/programming/python/python-2-vs-python-3/)  
 [June 2014 Blog post from SEBASTIANRASCHKA](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#Comparing-unorderable-types)  
 
-For my immediate goals of building some simple web scrapers, I decided to follow [https://www.quora.com/What-should-I-use-for-data-science-Python-2-7-x-or-Python-3-4-x/answer/Yilun-Tom-Zhang?srid=zU1D](Quora response from Yilun Zhang)  
+For my immediate goals of building some simple web scrapers, I decided to follow [Quora response from Yilun Zhang](https://www.quora.com/What-should-I-use-for-data-science-Python-2-7-x-or-Python-3-4-x/answer/Yilun-Tom-Zhang?srid=zU1D)  
 taking into account that there seems to be lower adoption of Python 3.x (I need to verify this with more research though)
 It is possible to maintain multiple Python environments on the same OS though - so I will be installing latest build of Python 3 at some point.
 
