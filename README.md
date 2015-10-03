@@ -3,13 +3,13 @@
 
 ##Pre-requisites - Environment Preparation:
 ###1. Which Python version to use? Python 2.7 (which is the default installed on Mac OS X) or Python 3?
-[Python wiki advice](https://wiki.python.org/moin/Python2orPython3)  
-[June 2014 Blog post from Learn to Code with Me](http://learntocodewith.me/programming/python/python-2-vs-python-3/)  
-[June 2014 Blog post from SEBASTIANRASCHKA](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#Comparing-unorderable-types)  
+>[Python wiki advice](https://wiki.python.org/moin/Python2orPython3)  
+>[June 2014 Blog post from Learn to Code with Me](http://learntocodewith.me/programming/python/python-2-vs-python-3/)  
+>[June 2014 Blog post from SEBASTIANRASCHKA](http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#Comparing-unorderable-types)  
 
-For my immediate goals of building some simple web scrapers, I decided to follow [Quora response from Yilun Zhang](https://www.quora.com/What-should-I-use-for-data-science-Python-2-7-x-or-Python-3-4-x/answer/Yilun-Tom-Zhang?srid=zU1D)  
-taking into account that there seems to be lower adoption of Python 3.x (I need to verify this with more research though)  
-It is possible to maintain multiple Python environments on the same OS though - so I will be installing latest build of Python 3 at some point.
+>For my immediate goals of building some simple web scrapers, I decided to follow [Quora response from Yilun Zhang](https://www.quora.com/What-should-I-use-for-data-science-Python-2-7-x-or-Python-3-4-x/answer/Yilun-Tom-Zhang?srid=zU1D)  
+>taking into account that there seems to be lower adoption of Python 3.x (I need to verify this with more research though)  
+>It is possible to maintain multiple Python environments on the same OS though - so I will be installing latest build of Python 3 at some point.
 
 
 ###2. INSTALL pip
@@ -54,8 +54,8 @@ pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7
 ```
 
 ###3. INSTALL iPython
-iPython provides a better IDE for developers than the default python IDE. 
-It provides helpful features like auto-complete and context-sensitive method selection.
+>iPython provides a better IDE for developers than the default python IDE. 
+>It provides helpful features like auto-complete and context-sensitive method selection.
 
 ```
 sudo pip install ipython[all]
@@ -229,8 +229,9 @@ Successfully installed urllib3-1.12
 	
 	
 ###5. WAS NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND  BUT RAN THE INSTALL FOR IT ANYWAY AND  FOUND THAT THE INSTALL WAS ALREADY TAKEN CARE OF
-Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
-and ran the following command which I found was unnecessary but worth the check:
+>Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
+>and ran the following command which I found was unnecessary for pyopenssl but worth the check. Note that  
+ndg-httpsclient and pyasn1 do get installed:
 ```
 sudo pip install pyopenssl ndg-httpsclient pyasn1
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -260,6 +261,10 @@ Successfully installed beautifulsoup4-4.4.1
 ```
 
 ###7. INSTALL VIRTUALENV
+> virtualenv is necessary for project encapsulation. 
+> virtualenvwrapper is useful for ease of use of virtual environments.
+> autoenv for automatic env detection when changing to a directory
+> Reference: [Python virtualenv & virtualenvwrapper Guides](http://docs.python-guide.org/en/latest/dev/virtualenvs/)  
 
 ```
 sudo pip install virtualenv
@@ -301,5 +306,16 @@ export WORKON_HOME=~/Envs
 
 ```
 source /usr/local/bin/virtualenvwrapper.sh
+```
+
+```
+brew install autoenv
+==> Downloading https://github.com/kennethreitz/autoenv/archive/v0.1.0.tar.gz
+######################################################################## 100.0%
+==> Caveats
+To finish the installation, source activate.sh in your shell:
+  source /usr/local/opt/autoenv/activate.sh
+==> Summary
+🍺  /usr/local/Cellar/autoenv/0.1.0: 4 files, 16K, built in 2 seconds
 ```
 
