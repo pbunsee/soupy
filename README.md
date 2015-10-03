@@ -41,10 +41,14 @@ Installing pip2 script to /usr/local/bin
 Installed /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg
 Processing dependencies for pip
 Finished processing dependencies for pip
+```
 
+```
 which pip
 /usr/local/bin/pip
+```
 
+```
 pip --version
 pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7)
 ```
