@@ -53,7 +53,8 @@ pip --version
 pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7)
 ```
 
-###3. Install ipython
+###3. Install iPython
+>This is an optional installation. Use whichever IDE you are most comfortable with.  
 >iPython provides a better IDE for developers than the default python IDE.   
 >It provides helpful features like auto-complete and context-sensitive method selection.
 
