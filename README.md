@@ -12,7 +12,7 @@
 >It is possible to maintain multiple Python environments on the same OS though - so I will be installing latest build of Python 3 at some point.
 
 
-###2. INSTALL pip
+###2. Install pip
 ```
 sudo easy_install pip
 Password:
@@ -53,7 +53,7 @@ pip --version
 pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7)
 ```
 
-###3. INSTALL iPython
+###3. Install ipython
 >iPython provides a better IDE for developers than the default python IDE. 
 >It provides helpful features like auto-complete and context-sensitive method selection.
 
@@ -211,7 +211,7 @@ Successfully installed MarkupSafe-0.23 Sphinx-1.3.1 alabaster-0.7.6 appnope-0.1.
 InsecurePlatformWarning
 ```
  
-###4. TO RESOLVE THE "InsecurePlatformWarning" from previous command, upgrade urllib3
+###4. To resolve the "InsecurePlatformWarning" from previous command, upgrade urllib3
 ```
 /Library/Python/2.7/site-packages:$ sudo pip install urllib3 --upgrade
 Password:
@@ -228,10 +228,12 @@ Successfully installed urllib3-1.12
 ```
 	
 	
-###5. WAS NOT SURE IF openssl COMPONENT NEEDS TO BE INSTALLED SEPARATELY AFTER RUNNING PREVIOUS COMMAND  BUT RAN THE INSTALL FOR IT ANYWAY AND  FOUND THAT THE INSTALL WAS ALREADY TAKEN CARE OF
+###5. Was not sure if openssl component needs to be installed separately after running previous command  but ran the install for it anyway and  found that at least the openssl install was already taken care of.
 >Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
 >and ran the following command which I found was unnecessary for pyopenssl but worth the check. Note that  
 ndg-httpsclient and pyasn1 do get installed:
+
+
 ```
 sudo pip install pyopenssl ndg-httpsclient pyasn1
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -248,7 +250,7 @@ Running setup.py install for ndg-httpsclient
 Successfully installed ndg-httpsclient-0.4.0 pyasn1-0.1.9
 ```
 
-###6. INSTALL BEAUTIFULSOUP 4
+###6. Install beautifulsoup4
 ```
 sudo pip install beautifulsoup4
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -260,7 +262,7 @@ Installing collected packages: beautifulsoup4
 Successfully installed beautifulsoup4-4.4.1
 ```
 
-###7. INSTALL VIRTUALENV
+###7. Install virtualenv
 > virtualenv is necessary for project encapsulation. 
 > virtualenvwrapper is useful for ease of use of virtual environments.
 > autoenv for automatic env detection when changing to a directory
