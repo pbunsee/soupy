@@ -54,7 +54,7 @@ pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7
 ```
 
 ###3. Install ipython
->iPython provides a better IDE for developers than the default python IDE. 
+>iPython provides a better IDE for developers than the default python IDE.   
 >It provides helpful features like auto-complete and context-sensitive method selection.
 
 ```
@@ -228,10 +228,10 @@ Successfully installed urllib3-1.12
 ```
 	
 	
-###5. Was not sure if openssl component needs to be installed separately after running previous command  but ran the install for it anyway and  found that at least the openssl install was already taken care of.
+###5. Take care of making SSL requests over HTTP work
 >Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
->and ran the following command which I found was unnecessary for pyopenssl but worth the check. Note that  
-ndg-httpsclient and pyasn1 do get installed:
+>and ran the following command which I found was unnecessary for pyopenssl but worth the check. 
+>Note that ndg-httpsclient and pyasn1 do get installed:
 
 
 ```
@@ -263,9 +263,9 @@ Successfully installed beautifulsoup4-4.4.1
 ```
 
 ###7. Install virtualenv
-> virtualenv is necessary for project encapsulation. 
-> virtualenvwrapper is useful for ease of use of virtual environments.
-> autoenv for automatic env detection when changing to a directory
+> virtualenv is necessary for project encapsulation.   
+> virtualenvwrapper is useful for ease of use of virtual environments.  
+> autoenv for automatic env detection when changing to a directory  
 > Reference: [Python virtualenv & virtualenvwrapper Guides](http://docs.python-guide.org/en/latest/dev/virtualenvs/)  
 
 ```
