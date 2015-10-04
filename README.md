@@ -408,14 +408,14 @@ wheel==0.24.0
 
 ## Let's use BeautifulSoup4 to scrape some websites
 
-> Note that you have the option to use Python urllib, urllib2 or urllib3 to perform the request to the website.
-> urllib3 is not backwards compatible with urllib2. The commands to make the GET request to a website is totally
-> different than what you would use in urllib2.
-> I chose to use urllib3 simply to familiarize myself with it.
-> urllib2 would have also been a valid choice.
+> Note that you have the option to use Python urllib, urllib2 or urllib3 to perform the request to the website.  
+> urllib3 is not backwards compatible with urllib2. The commands to make the GET request to a website is totally  
+> different than what you would use in urllib2.  
+> I chose to use urllib3 simply to familiarize myself with it.  
+> urllib2 would have also been a valid choice.  
 
 
-> Scrape [Google AAPL stock price](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=aapl+stock+prices)
+> Scrape [Google AAPL stock price](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=aapl+stock+prices)  
 
 
 
