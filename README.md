@@ -312,7 +312,9 @@ source bin/activate
 
 ###7. Take care of making SSL requests over HTTP work
 >Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
->and ran the following command in the new virtualenv called 'soupy':  
+>and ran the following command in the new virtualenv called 'soupy' plus I also previously ran this command  
+>against the default python installed on my hard drive  
+>(Note that if you only run it in the virtualenv you must install it in each new virtualenv you create):  
 
 ```
 (soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ sudo -H pip install pyopenssl ndg-httpsclient pyasn1
