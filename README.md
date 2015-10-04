@@ -53,7 +53,79 @@ pip --version
 pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7)
 ```
 
-###3. Install iPython
+
+###3. Install virtualenv
+> virtualenv is necessary for project encapsulation.   
+> virtualenvwrapper is useful for ease of use of virtual environments.  
+> autoenv for automatic env detection when changing to a directory  
+> Reference: [Python virtualenv & virtualenvwrapper Guides](http://docs.python-guide.org/en/latest/dev/virtualenvs/)  
+
+```
+sudo pip install virtualenv
+Password:
+The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenv
+  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.python.org', port=443): Read timed out. (read timeout=15)",)': /simple/virtualenv/
+  Downloading virtualenv-13.1.2-py2.py3-none-any.whl (1.7MB)
+    100% |████████████████████████████████| 1.7MB 282kB/s 
+Installing collected packages: virtualenv
+Successfully installed virtualenv-13.1.2
+```
+
+
+```
+sudo pip install virtualenvwrapper
+The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenvwrapper
+  Downloading virtualenvwrapper-4.7.1-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): virtualenv in /Library/Python/2.7/site-packages (from virtualenvwrapper)
+Collecting virtualenv-clone (from virtualenvwrapper)
+  Downloading virtualenv-clone-0.2.6.tar.gz
+Collecting stevedore (from virtualenvwrapper)
+  Downloading stevedore-1.8.0-py2.py3-none-any.whl
+Collecting argparse (from stevedore->virtualenvwrapper)
+  Downloading argparse-1.4.0-py2.py3-none-any.whl
+Requirement already satisfied (use --upgrade to upgrade): six>=1.9.0 in /Library/Python/2.7/site-packages (from stevedore->virtualenvwrapper)
+Requirement already satisfied (use --upgrade to upgrade): pbr<2.0,>=1.6 in /Library/Python/2.7/site-packages (from stevedore->virtualenvwrapper)
+Installing collected packages: virtualenv-clone, argparse, stevedore, virtualenvwrapper
+  Running setup.py install for virtualenv-clone
+Successfully installed argparse-1.4.0 stevedore-1.8.0 virtualenv-clone-0.2.6 virtualenvwrapper-4.7.1
+```
+
+```
+export WORKON_HOME=~/Envs
+```
+
+```
+source /usr/local/bin/virtualenvwrapper.sh
+```
+
+```
+brew install autoenv
+==> Downloading https://github.com/kennethreitz/autoenv/archive/v0.1.0.tar.gz
+######################################################################## 100.0%
+==> Caveats
+To finish the installation, source activate.sh in your shell:
+  source /usr/local/opt/autoenv/activate.sh
+==> Summary
+🍺  /usr/local/Cellar/autoenv/0.1.0: 4 files, 16K, built in 2 seconds
+```
+
+###4. Create your new virtual environment - I called my env 'soupy'. Then activate the env.
+```
+ virtualenv soupy
+New python executable in soupy/bin/python
+Installing setuptools, pip, wheel...done.
+```
+
+```
+cd soupy  
+source bin/activate
+```
+
+###5. Install iPython
 >This is an optional installation. Use whichever IDE you are most comfortable with.  
 >iPython provides a better IDE for developers than the default python IDE.   
 >It provides helpful features like auto-complete and context-sensitive method selection.
@@ -212,113 +284,93 @@ Successfully installed MarkupSafe-0.23 Sphinx-1.3.1 alabaster-0.7.6 appnope-0.1.
 InsecurePlatformWarning
 ```
  
-###4. To resolve the "InsecurePlatformWarning" from previous command, upgrade urllib3
+###6. To resolve the "InsecurePlatformWarning" from previous command, upgrade urllib3
 ```
-/Library/Python/2.7/site-packages:$ sudo pip install urllib3 --upgrade
-Password:
-The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+(soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ sudo -H pip install urllib3 --upgrade
 Collecting urllib3
-/Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
-InsecurePlatformWarning
-Downloading urllib3-1.12-py2.py3-none-any.whl (85kB)
-100% |████████████████████████████████| 86kB 3.6MB/s 
+/Users/praneshabunsee/Documents/NYCDA/Projects/pythonWork/soupy/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Downloading urllib3-1.12-py2.py3-none-any.whl (85kB)
+    100% |████████████████████████████████| 86kB 3.3MB/s 
 Installing collected packages: urllib3
 Successfully installed urllib3-1.12
-/Library/Python/2.7/site-packages:$ 
 ```
 	
-	
-###5. Take care of making SSL requests over HTTP work
+###7. Take care of making SSL requests over HTTP work
 >Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
->and ran the following command which I found was unnecessary for pyopenssl but worth the check. 
->Note that ndg-httpsclient and pyasn1 do get installed:
-
+>and ran the following command:  
 
 ```
-sudo pip install pyopenssl ndg-httpsclient pyasn1
-The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Requirement already satisfied (use --upgrade to upgrade): pyopenssl in /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python
+(soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ sudo -H pip install pyopenssl ndg-httpsclient pyasn1
+Collecting pyopenssl
+/Users/praneshabunsee/Documents/NYCDA/Projects/pythonWork/soupy/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+  Downloading pyOpenSSL-0.15.1-py2.py3-none-any.whl (102kB)
+    100% |████████████████████████████████| 106kB 1.1MB/s 
 Collecting ndg-httpsclient
-/Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
-InsecurePlatformWarning
-Downloading ndg_httpsclient-0.4.0.tar.gz
+  Downloading ndg_httpsclient-0.4.0.tar.gz
 Collecting pyasn1
-Downloading pyasn1-0.1.9-py2.py3-none-any.whl
-Installing collected packages: ndg-httpsclient, pyasn1
-Running setup.py install for ndg-httpsclient
-Successfully installed ndg-httpsclient-0.4.0 pyasn1-0.1.9
+  Downloading pyasn1-0.1.9-py2.py3-none-any.whl
+Collecting six>=1.5.2 (from pyopenssl)
+  Downloading six-1.9.0-py2.py3-none-any.whl
+Collecting cryptography>=0.7 (from pyopenssl)
+  Downloading cryptography-1.0.2.tar.gz (332kB)
+    100% |████████████████████████████████| 335kB 1.2MB/s 
+Collecting idna>=2.0 (from cryptography>=0.7->pyopenssl)
+  Downloading idna-2.0-py2.py3-none-any.whl (61kB)
+    100% |████████████████████████████████| 61kB 4.3MB/s 
+Requirement already satisfied (use --upgrade to upgrade): setuptools in ./lib/python2.7/site-packages (from cryptography>=0.7->pyopenssl)
+Collecting enum34 (from cryptography>=0.7->pyopenssl)
+  Downloading enum34-1.0.4.tar.gz
+Collecting ipaddress (from cryptography>=0.7->pyopenssl)
+  Downloading ipaddress-1.0.14-py27-none-any.whl
+Collecting cffi>=1.1.0 (from cryptography>=0.7->pyopenssl)
+  Downloading cffi-1.2.1.tar.gz (335kB)
+    100% |████████████████████████████████| 335kB 861kB/s 
+Collecting pycparser (from cffi>=1.1.0->cryptography>=0.7->pyopenssl)
+  Downloading pycparser-2.14.tar.gz (223kB)
+    100% |████████████████████████████████| 225kB 1.1MB/s 
+Building wheels for collected packages: ndg-httpsclient, cryptography, enum34, cffi, pycparser
+  Running setup.py bdist_wheel for ndg-httpsclient
+  Stored in directory: /var/root/Library/Caches/pip/wheels/30/85/40/a29750f9287fe119a10708580a73cfb16f51e5f9a820430a2d
+  Running setup.py bdist_wheel for cryptography
+  Stored in directory: /var/root/Library/Caches/pip/wheels/a6/26/db/a0fe3e48fccc54c031bd4c43705e6abf6ac7e7b85df95373ee
+  Running setup.py bdist_wheel for enum34
+  Stored in directory: /var/root/Library/Caches/pip/wheels/d1/b2/2c/b51348698bd1921a226cf48d790b282d86fb4bcf9728afd6b3
+  Running setup.py bdist_wheel for cffi
+  Stored in directory: /var/root/Library/Caches/pip/wheels/fa/ad/ab/28df6da3b6cf3c510c6dc64f336ef17ef37cd1b0d4d5eff3bc
+  Running setup.py bdist_wheel for pycparser
+  Stored in directory: /var/root/Library/Caches/pip/wheels/c7/28/31/bac6d0b118c0bdcbf57f9219afdf2e624379c07efa6c769dbc
+Successfully built ndg-httpsclient cryptography enum34 cffi pycparser
+Installing collected packages: six, idna, pyasn1, enum34, ipaddress, pycparser, cffi, cryptography, pyopenssl, ndg-httpsclient
+Successfully installed cffi-1.2.1 cryptography-1.0.2 enum34-1.0.4 idna-2.0 ipaddress-1.0.14 ndg-httpsclient-0.4.0 pyasn1-0.1.9 pycparser-2.14 pyopenssl-0.15.1 six-1.9.0
+(soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ 
 ```
 
-###6. Install beautifulsoup4
-```
-sudo pip install beautifulsoup4
-The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+###8. Install beautifulsoup4
+sudo -H pip install beautifulsoup4
+Password:
 Collecting beautifulsoup4
+/Users/praneshabunsee/Documents/NYCDA/Projects/pythonWork/soupy/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
   Downloading beautifulsoup4-4.4.1-py2-none-any.whl (81kB)
-    100% |████████████████████████████████| 81kB 4.5MB/s 
+    100% |████████████████████████████████| 81kB 1.8MB/s 
 Installing collected packages: beautifulsoup4
 Successfully installed beautifulsoup4-4.4.1
+(soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ 
 ```
 
-###7. Install virtualenv
-> virtualenv is necessary for project encapsulation.   
-> virtualenvwrapper is useful for ease of use of virtual environments.  
-> autoenv for automatic env detection when changing to a directory  
-> Reference: [Python virtualenv & virtualenvwrapper Guides](http://docs.python-guide.org/en/latest/dev/virtualenvs/)  
-
+###9. Use sudo -H to install beautifulsoup4 (have to use --upgrade flag since it is already installed)
 ```
-sudo pip install virtualenv
-Password:
-The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Collecting virtualenv
-  Retrying (Retry(total=4, connect=None, read=None, redirect=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.python.org', port=443): Read timed out. (read timeout=15)",)': /simple/virtualenv/
-  Downloading virtualenv-13.1.2-py2.py3-none-any.whl (1.7MB)
-    100% |████████████████████████████████| 1.7MB 282kB/s 
-Installing collected packages: virtualenv
-Successfully installed virtualenv-13.1.2
+sudo -H pip install beautifulsoup4 --upgrade
+Requirement already up-to-date: beautifulsoup4 in /Library/Python/2.7/site-packages
 ```
 
 
+###10. Review the products installed by issuing the following command:
 ```
-sudo pip install virtualenvwrapper
-The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Collecting virtualenvwrapper
-  Downloading virtualenvwrapper-4.7.1-py2.py3-none-any.whl
-Requirement already satisfied (use --upgrade to upgrade): virtualenv in /Library/Python/2.7/site-packages (from virtualenvwrapper)
-Collecting virtualenv-clone (from virtualenvwrapper)
-  Downloading virtualenv-clone-0.2.6.tar.gz
-Collecting stevedore (from virtualenvwrapper)
-  Downloading stevedore-1.8.0-py2.py3-none-any.whl
-Collecting argparse (from stevedore->virtualenvwrapper)
-  Downloading argparse-1.4.0-py2.py3-none-any.whl
-Requirement already satisfied (use --upgrade to upgrade): six>=1.9.0 in /Library/Python/2.7/site-packages (from stevedore->virtualenvwrapper)
-Requirement already satisfied (use --upgrade to upgrade): pbr<2.0,>=1.6 in /Library/Python/2.7/site-packages (from stevedore->virtualenvwrapper)
-Installing collected packages: virtualenv-clone, argparse, stevedore, virtualenvwrapper
-  Running setup.py install for virtualenv-clone
-Successfully installed argparse-1.4.0 stevedore-1.8.0 virtualenv-clone-0.2.6 virtualenvwrapper-4.7.1
+pip freeze
+wheel==0.24.0
 ```
 
-```
-export WORKON_HOME=~/Envs
-```
-
-```
-source /usr/local/bin/virtualenvwrapper.sh
-```
-
-```
-brew install autoenv
-==> Downloading https://github.com/kennethreitz/autoenv/archive/v0.1.0.tar.gz
-######################################################################## 100.0%
-==> Caveats
-To finish the installation, source activate.sh in your shell:
-  source /usr/local/opt/autoenv/activate.sh
-==> Summary
-🍺  /usr/local/Cellar/autoenv/0.1.0: 4 files, 16K, built in 2 seconds
-```
 
