@@ -18,4 +18,7 @@ soup = BeautifulSoup(req, "html.parser")
 
 print soup.prettify()
 
+getdivs = soup.findAll("div", { "class" : "finance_answer_card__price" } )
+
+print getdivs
 
