@@ -348,6 +348,7 @@ Successfully installed cffi-1.2.1 cryptography-1.0.2 enum34-1.0.4 idna-2.0 ipadd
 ```
 
 ###8. Install beautifulsoup4
+```
 sudo -H pip install beautifulsoup4
 Password:
 Collecting beautifulsoup4
