@@ -417,6 +417,14 @@ wheel==0.24.0
 
 > Scrape [Google AAPL stock price](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=aapl+stock+prices)  
 
+> To execute the python script:  
 
+```
+python scraper_google_stocks.py
+```
+
+```
+The output should be the entire html content of the url requested.
+```
 
 
