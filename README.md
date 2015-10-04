@@ -16,6 +16,8 @@
 ```
 sudo easy_install pip
 Password:
+```
+```
 Searching for pip
 Reading http://pypi.python.org/simple/pip/
 Best match: pip 7.1.2
@@ -63,6 +65,8 @@ pip 7.1.2 from /Library/Python/2.7/site-packages/pip-7.1.2-py2.7.egg (python 2.7
 ```
 sudo pip install virtualenv
 Password:
+```
+```
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Collecting virtualenv
@@ -76,6 +80,8 @@ Successfully installed virtualenv-13.1.2
 
 ```
 sudo pip install virtualenvwrapper
+```
+```
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Collecting virtualenvwrapper
@@ -113,19 +119,7 @@ To finish the installation, source activate.sh in your shell:
 🍺  /usr/local/Cellar/autoenv/0.1.0: 4 files, 16K, built in 2 seconds
 ```
 
-###4. Create your new virtual environment - I called my env 'soupy'. Then activate the env.
-```
- virtualenv soupy
-New python executable in soupy/bin/python
-Installing setuptools, pip, wheel...done.
-```
-
-```
-cd soupy  
-source bin/activate
-```
-
-###5. Install iPython
+###4. Install iPython
 >This is an optional installation. Use whichever IDE you are most comfortable with.  
 >iPython provides a better IDE for developers than the default python IDE.   
 >It provides helpful features like auto-complete and context-sensitive method selection.
@@ -133,6 +127,8 @@ source bin/activate
 ```
 sudo pip install ipython[all]
 Password:
+```
+```
 The directory '/Users/praneshabunsee/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/Users/praneshabunsee/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Collecting ipython[all]
@@ -284,9 +280,11 @@ Successfully installed MarkupSafe-0.23 Sphinx-1.3.1 alabaster-0.7.6 appnope-0.1.
 InsecurePlatformWarning
 ```
  
-###6. To resolve the "InsecurePlatformWarning" from previous command, upgrade urllib3
+###5. To resolve the "InsecurePlatformWarning" from previous command, upgrade urllib3
 ```
 (soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ sudo -H pip install urllib3 --upgrade
+```
+```
 Collecting urllib3
 /Users/praneshabunsee/Documents/NYCDA/Projects/pythonWork/soupy/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
   InsecurePlatformWarning
@@ -295,13 +293,31 @@ Collecting urllib3
 Installing collected packages: urllib3
 Successfully installed urllib3-1.12
 ```
-	
+
+###6. Create your new virtual environment - I called my env 'soupy'. Then activate the env.
+```
+virtualenv soupy
+```
+```
+New python executable in soupy/bin/python
+Installing setuptools, pip, wheel...done.
+```
+
+```
+cd soupy  
+```
+```
+source bin/activate
+```
+
 ###7. Take care of making SSL requests over HTTP work
 >Since I am using the default Python version provided on MAC OS X - i.e. Python version 2.7.5, I took heed of the info provided about SSL requests over HTTP in [urllib3 dev documentation](https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning)
->and ran the following command:  
+>and ran the following command in the new virtualenv called 'soupy':  
 
 ```
 (soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ sudo -H pip install pyopenssl ndg-httpsclient pyasn1
+```
+```
 Collecting pyopenssl
 /Users/praneshabunsee/Documents/NYCDA/Projects/pythonWork/soupy/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
   InsecurePlatformWarning
@@ -348,10 +364,13 @@ Successfully installed cffi-1.2.1 cryptography-1.0.2 enum34-1.0.4 idna-2.0 ipadd
 ```
 
 ###8. Install beautifulsoup4
+>Run the following command in the new virtualenv called 'soupy'    
 >Use sudo -H to install beautifulsoup4 (use --upgrade flag if it is already installed)  
 ```
 sudo -H pip install beautifulsoup4
 Password:
+```
+```
 Collecting beautifulsoup4
 /Users/praneshabunsee/Documents/NYCDA/Projects/pythonWork/soupy/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py:90: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
   InsecurePlatformWarning
@@ -362,9 +381,11 @@ Successfully installed beautifulsoup4-4.4.1
 (soupy)~/Documents/NYCDA/Projects/pythonWork/soupy:master$ 
 ```
 
-###9. Review the products installed by issuing the following command:
+###9. Review the products installed in the virtualenv by issuing the following command:
 ```
 pip freeze
+```
+```
 beautifulsoup4==4.4.1
 cffi==1.2.1
 cryptography==1.0.2
