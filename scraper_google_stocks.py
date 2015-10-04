@@ -14,7 +14,7 @@ req = manager.request('GET', url)
 
 print req.status
 
-soup = BeautifulSoup(req)
+soup = BeautifulSoup(req, "html.parser")
 
 print soup.prettify()
 
