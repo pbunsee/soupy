@@ -348,7 +348,7 @@ Successfully installed cffi-1.2.1 cryptography-1.0.2 enum34-1.0.4 idna-2.0 ipadd
 ```
 
 ###8. Install beautifulsoup4
->Use sudo -H to install beautifulsoup4 (have to use --upgrade flag since it is already installed)  
+>Use sudo -H to install beautifulsoup4 (use --upgrade flag if it is already installed)  
 ```
 sudo -H pip install beautifulsoup4
 Password:
@@ -365,6 +365,18 @@ Successfully installed beautifulsoup4-4.4.1
 ###9. Review the products installed by issuing the following command:
 ```
 pip freeze
+beautifulsoup4==4.4.1
+cffi==1.2.1
+cryptography==1.0.2
+enum34==1.0.4
+idna==2.0
+ipaddress==1.0.14
+ndg-httpsclient==0.4.0
+pyasn1==0.1.9
+pycparser==2.14
+pyOpenSSL==0.15.1
+six==1.9.0
+urllib3==1.12
 wheel==0.24.0
 ```
 
