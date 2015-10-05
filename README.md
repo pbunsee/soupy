@@ -1,5 +1,10 @@
 #Using BeautifulSoup to scrape data from websites
 
+##Disclaimer:
+>I am a Python newbie.  
+>This is a learning experience and does not profess to be accurate, best practice or perfect.  
+>I have not settled on proper install sequence and there are some installation exceptions reported which I have not resolved as yet.  
+>The scraper code is exploratory - I have a long way to go still on optimization, best practices, performant code.  
 
 ##Pre-requisites - Environment Preparation:
 ###1. Which Python version to use? Python 2.7 (which is the default installed on Mac OS X) or Python 3?
@@ -426,5 +431,10 @@ python scraper_google_stocks.py
 ```
 The output should be the entire html content of the url requested.
 ```
+
+
+>Next let's get all divs  
+>This code returns an empty array of divs - still resolving.
+
 
 
