@@ -407,6 +407,18 @@ six==1.9.0
 urllib3==1.12
 wheel==0.24.0
 ```
+###10. Take care of InsecurePlatformWarning exception
+
+```
+/Library/Python/2.7/site-packages/urllib3/util/ssl_.py:100: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. For more information, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning.
+  InsecurePlatformWarning
+
+~/Documents/NYCDA/Projects/pythonWork/soupy:master$ pip install certifi
+Requirement already satisfied (use --upgrade to upgrade): certifi in /Library/Python/2.7/site-packages
+~/Documents/NYCDA/Projects/pythonWork/soupy:master$ pip install certifi --upgrade
+Requirement already up-to-date: certifi in /Library/Python/2.7/site-packages
+~/Documents/NYCDA/Projects/pythonWork/soupy:master$ 
+```
 
 ---
 ---
