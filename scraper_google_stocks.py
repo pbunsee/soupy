@@ -11,19 +11,18 @@ import certifi
 
 url = "https://www.google.com/webhp?ie=UTF-8#q=aapl+stock+prices"
 manager = urllib3.PoolManager(
-  cert_reqs='CERT_REQUIRED', # Force certificate check.
-  ca_certs=certifi.where(),  # Path to the Certifi bundle.
+    cert_reqs='CERT_REQUIRED', # Force certificate check.
+    ca_certs=certifi.where(),  # Path to the Certifi bundle.
 )
 
 try:
-  req = manager.request('GET', url)
-  print req.status
-  soup = BeautifulSoup(req, "html.parser")
-  print soup.prettify()
-  #getdivs = soup.findAll("div", { "class" : "finance_answer_card__price" } )
-  getdivs = soup.findAll("div")
-  print getdivs
+    req = manager.request('GET', url)
+    print req.status
+    soup = BeautifulSoup(req, "html.parser")
+    print soup.prettify()
+    getdivs = soup.find_all('div', class_='finance_answer_card__price')
+    print getdivs
 except urllib3.exceptions.SSLError as e:
-  # Handle incorrect certificate error.
-  print "error"
+    # Handle incorrect certificate error.
+    print "error"
 
